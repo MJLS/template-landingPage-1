@@ -1,0 +1,157 @@
+:root {
+  --color-1: #1e1e1e;
+  --color-2: #222222;
+  --color-3: #333333;
+  --color-4: #444444;
+  --color-5: #555555;
+  --color-6: #666666;
+  --color-7: #aaaaaa;
+  --color-8: #bbbbbb;
+  --color-9: #cccccc;
+  --color-10: #dddddd;
+}
+
+.wrapper-section1,
+.wrapper-section2,
+.wrapper-section2-content {
+  color: var(--color-10);
+}
+
+.wrapper-section1 {
+  width: 172px;
+  height: 100%;
+  background-color: var(--color-1);
+  padding: 15px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper-section1-content {
+  width: 100%;
+  height: 160px;
+  background-color: var(--color-4);
+  margin: 5px;
+}
+
+.wrapper-section2 {
+  height: 100%;
+  background-color: var(--color-2);
+  margin-left: 172px;
+}
+
+.wrapper-section2-full {
+  width: auto;
+  height: 100vh;
+  background-color: var(--color-3);
+  border-bottom: 1px solid var(--color-8);
+  display: flex;
+  justify-content: center;
+}
+.section2-full {
+  display: flex;
+  flex-direction: column;
+}
+.section2-full-box1,
+.section2-full-box2 {
+  margin: auto 0 auto 0;
+  width: 100%;
+  height: 45%;
+  border: 1px solid var(--color-10);
+}
+
+.section2-full-box2 {
+  height: 75%;
+  display: flex;
+}
+.section2-box2 {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.box2-up {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-7);
+}
+.box2-down {
+  width: 100%;
+  height: 100%;
+}
+
+.section2-box3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.box-3-right {
+  width: 100%;
+}
+.box-3-left {
+  width: 100%;
+  background-color: var(--color-7);
+}
+
+.section2-box4 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.box4-content {
+  margin: auto;
+  width: 200px;
+  height: 150px;
+  background-color: var(--color-7);
+}
+
+.section2-box5 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.box5-content {
+  flex-grow: 1;
+  border: solid 1px var(--color-6);
+}
+
+@media (max-width: 960px) {
+  .wrapper-section1 {
+    height: 172px;
+    width: 100%;
+    /* <1> */
+    margin-top: -172px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .wrapper-section2 {
+    margin-left: 0;
+    margin-top: 172px;
+  }
+  .section2-full-box2 {
+    flex-direction: column;
+  }
+
+  .section2-box2 {
+    width: 100%;
+    flex-direction: row;
+  }
+
+  .section2-box3 {
+    flex-direction: column;
+  }
+  .box-3-left {
+    height: 50%;
+  }
+
+  .section2-box4 {
+    flex-direction: column;
+  }
+}
+
+/* NOTE: <1> Contrarrestra el margin-top de .wrapper-section2. De lo contrario arrastra toda la estructura  */
